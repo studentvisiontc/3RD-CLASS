@@ -175,7 +175,7 @@
         .item-topic-name { font-size: 14px; font-weight: 800; }
         .btn-take { background: var(--primary-blue); color: white; text-decoration: none; padding: 8px 25px; border-radius: 8px; font-size: 10px; font-weight: 900; text-transform: uppercase; }
 
-        /* STUDENT & SUBSCRIPTION DETAILS (Impressive Value Design - NO Labels) */
+        /* STUDENT & SUBSCRIPTION DETAILS */
         .details-grid { display: grid; grid-template-columns: 1fr 1fr; background: white; width: 100%; border-bottom: 1px solid var(--border-color); }
         .details-card { padding: 25px 30px; border-right: 1px solid var(--border-color); }
         .details-card:last-child { border-right: none; }
@@ -219,12 +219,31 @@
         .bar-container { width: 100%; height: 8px; background: #e2e8f0; border-radius: 10px; overflow: hidden; }
         .bar-fill { height: 100%; background: linear-gradient(to right, var(--primary-blue), #3b82f6); transition: width 1s ease-in-out; }
 
-        /* STATE TOPPERS */
+        /* STATE TOPPERS - FULL WIDTH */
         .fame-box { padding: 35px 0; background: white; width: 100%; border-bottom: 1px solid var(--border-color); position: relative; }
         .fame-track { display: flex; gap: 20px; width: max-content; animation: liveScroll 85s linear infinite; padding: 15px 0; }
         .topper-unit { background: white; border: 1.5px solid #bae6fd; width: 320px; min-height: 340px; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden; border-radius: 0; }
+        
+        /* Rank Badge Style */
+        .rank-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: linear-gradient(135deg, var(--primary-blue), #3b82f6);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 10px;
+            font-weight: 900;
+            z-index: 10;
+            text-transform: uppercase;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            border: 1px solid rgba(255,255,255,0.2);
+            letter-spacing: 0.5px;
+        }
+
         .topper-photo { width: 85px; height: 85px; border-radius: 50%; border: 4px solid var(--accent-orange); object-fit: cover; margin-bottom: 12px; z-index: 5; }
-        .topper-score { font-size: 16px; font-weight: 900; color: var(--success-green); background: #f0fdf4; padding: 6px 18px; border-radius: 50px; border: 1px solid var(--success-green); width: 85%; z-index: 5; }
+        .topper-score { font-size: 16px; font-weight: 900; color: var(--success-green); background: #f0fdf4; padding: 6px 18px; border-radius: 50px; margin-top: 5px; border: 1px solid var(--success-green); width: 85%; z-index: 5; }
         .congrats-txt { font-size: 22px; font-weight: 900; font-family: 'Bebas Neue', cursive; letter-spacing: 2.5px; margin-bottom: 10px; background: linear-gradient(135deg, #d00000 0%, #ffa500 50%, #d00000 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: congratsShine 3s linear infinite, congratsPulse 1.5s ease-in-out infinite alternate; z-index: 5; }
         .firework-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
         .rocket { position: absolute; bottom: -50px; width: 4px; height: 20px; background: linear-gradient(to top, var(--accent-orange), #fff); opacity: 0; animation: rocketLaunchSequence 4s infinite cubic-bezier(0.4, 0, 0.2, 1); }
@@ -235,7 +254,7 @@
         @keyframes starScatter { 0% { transform: translate(0, 0) rotate(0deg); } 100% { transform: translate(var(--tx), var(--ty)) rotate(360deg); } }
         @keyframes liveScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-        /* NEW FOOTER STYLES */
+        /* FOOTER */
         footer { background: var(--primary-blue); color: white; padding: 25px 20px 15px 20px; border-top: 4px solid var(--accent-orange); margin-top: auto; width: 100%; }
         .footer-content { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 25px; max-width: 1450px; margin: 0 auto; text-align: left; }
         .footer-column { display: flex; flex-direction: column; }
@@ -281,7 +300,7 @@
         <img src="https://studentvisiontc.github.io/SVTC-Images/SV%20Circle%20logo.png" alt="SV Logo" class="logo">
         <div>
             <div class="main-title">Student Vision Talent Competition</div>
-            <div class="sub-title">“3<sup>rd</sup> Class Student Corner”</div>
+            <div class="sub-title">“See Your Success”</div>
         </div>
     </div>
     <div class="header-right">
@@ -517,7 +536,7 @@
         </div>
     </div>
 
-    <!-- MOVED SECTION: STUDENT & SUBSCRIPTION DETAILS (Values Only Design) -->
+    <!-- STUDENT & SUBSCRIPTION DETAILS SECTION (Values Only Design) -->
     <div class="details-grid">
         <!-- STUDENT PROFILE SECTION -->
         <div class="details-card">
@@ -576,6 +595,7 @@
                     function renderStar(p) {
                         return `
                         <div class="topper-unit">
+                            <div class="rank-badge">1st Rank</div>
                             <div class="firework-container">
                                 <div class="rocket" style="left: 15%; animation-delay: 0s;"></div>
                                 <div class="explosion-stars" style="left: 15%; animation-delay: 1.3s;">
