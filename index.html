@@ -133,7 +133,7 @@
         .stat-box.highlight i { color: var(--accent-orange); }
         .stat-box.highlight .stat-value { color: var(--accent-orange); }
 
-        /* DAILY CHALLENGE SECTION - FIXED CSS */
+        /* DAILY CHALLENGE SECTION */
         .daily-challenge-box {
             background: linear-gradient(135deg, #fff 0%, #fffbeb 100%);
             border: 1px solid #fef3c7;
@@ -160,55 +160,45 @@
             transition: 0.3s;
             white-space: nowrap;
         }
-        .btn-challenge:hover { transform: scale(1.05); background: #ff8c00; }
 
-        /* SRM BANNER - MODIFIED DYNAMIC LAYOUT */
+        /* SRM BANNER - MODIFIED STYLISH 2 LINES */
         .srm-banner {
             display: flex;
             align-items: center;
             gap: clamp(10px, 2vw, 20px);
             background: linear-gradient(to right, #fff, #f9fbff);
             position: relative;
-            flex-wrap: wrap; /* Allows wrapping on mobile */
+            flex-wrap: wrap;
         }
         .srm-banner::before { content: ''; position: absolute; left: 0; top: 0; width: 4px; height: 100%; background: var(--primary-blue); }
         .srm-icon-box { width: clamp(35px, 6vw, 50px); height: clamp(35px, 6vw, 50px); background: #f0f7ff; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: clamp(16px, 2vw, 20px); color: var(--primary-blue); flex-shrink: 0; border: 1px solid #e0efff; }
         
-        /* Flex wrapper for Passage and Right Contact Info */
-        .srm-main-container { 
-            display: flex; 
-            flex: 1; 
-            align-items: center; 
-            gap: 20px; 
-            flex-wrap: wrap; 
-        }
+        .srm-main-container { display: flex; flex: 1; align-items: center; gap: 20px; flex-wrap: wrap; }
         .srm-content { flex: 2; min-width: 250px; }
         .srm-title { font-size: clamp(11px, 2vw, 14px); font-weight: 900; color: var(--primary-blue); margin-bottom: 1px; text-transform: uppercase; }
         .srm-desc { font-size: clamp(8px, 1.5vw, 10.5px); color: #64748b; line-height: 1.4; font-family: 'Inter'; margin: 0; text-align: justify; }
         
         .srm-contact-merged-gold { 
             flex: 1;
-            min-width: 200px;
-            font-size: clamp(10px, 1.8vw, 12px); 
-            font-weight: 900; 
+            min-width: 220px;
             display: flex; 
-            flex-direction: column; /* Stacked on right side for laptop */
+            flex-direction: column; 
             gap: 6px;
             align-items: flex-start;
             border-left: 1px solid rgba(0,0,139,0.05);
             padding-left: 15px;
         }
-        .srm-contact-merged-gold div { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
-        .srm-contact-merged-gold .label { color: #64748b; font-size: 8.5px; text-transform: uppercase; font-weight: 800; }
+        .srm-contact-merged-gold div { display: flex; align-items: center; gap: 8px; }
+        .srm-contact-merged-gold .label { color: #64748b; font-size: 8.5px; text-transform: uppercase; font-weight: 800; white-space: nowrap; }
         .srm-contact-merged-gold .value { 
             color: var(--gold-metallic); 
             text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.05);
             font-family: 'Inter', sans-serif;
-            letter-spacing: 0.2px;
-            font-size: 13px;
+            font-weight: 900;
+            font-size: clamp(11px, 1.8vw, 13px);
         }
 
-        /* ACHIEVEMENTS */
+        /* ACHIEVEMENTS - REMOVED SUPER IQ */
         .achievements-premium {
             background: linear-gradient(135deg, #000428 0%, #004e92 100%);
             color: white;
@@ -246,7 +236,7 @@
         
         .item-bottom { background: var(--topic-bg); padding: 8px 18px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #bae6fd; width: 100%; }
         .item-topic-name { font-size: 12px; font-weight: 800; text-align: left; }
-        .btn-take { background: var(--primary-blue); color: white; text-decoration: none; padding: 4px 15px; border-radius: 5px; font-size: 8.5px; font-weight: 900; text-transform: uppercase; transition: 0.3s; margin-left: auto; }
+        .btn-take { background: var(--primary-blue); color: white; text-decoration: none; padding: 4px 15px; border-radius: 50px; font-size: 8.5px; font-weight: 900; text-transform: uppercase; transition: 0.3s; margin-left: auto; }
 
         /* STATUS PANEL */
         .status-panel { background: white; padding-top: 15px !important; padding-bottom: 15px !important; }
@@ -322,7 +312,7 @@
         .fame-box { padding: 25px 0; background: white; width: 100%; border-bottom: 1px solid var(--border-color); position: relative; overflow: hidden; }
         .fame-track { display: flex; gap: 15px; width: max-content; animation: liveScroll 85s linear infinite; padding: 10px 0; }
         .topper-unit { background: white; border: 1.5px solid #bae6fd; width: 270px; min-height: 290px; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden; border-radius: 15px; }
-        .rank-badge { position: absolute; top: 10px; left: 10px; background: linear-gradient(135deg, var(--primary-blue), #3b82f6); color: white; padding: 4px 10px; border-radius: 6px; font-size: 9px; font-weight: 900; z-index: 10; text-transform: uppercase; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .rank-badge { position: absolute; top: 10px; left: 10px; background: linear-gradient(135deg, var(--primary-blue), #3b82f6); color: white; padding: 4px 10px; border-radius: 6px; font-size: 9px; font-weight: 900; z-index: 10; text-transform: uppercase; }
         .topper-photo { width: 75px; height: 75px; border-radius: 50%; border: 3px solid var(--accent-orange); object-fit: cover; margin-bottom: 8px; z-index: 5; }
         .topper-score { font-size: 13px; font-weight: 900; color: var(--success-green); background: #f0fdf4; padding: 6px 15px; border-radius: 40px; margin-top: 3px; border: 1px solid var(--success-green); width: 80%; z-index: 5; }
         .congrats-txt { font-size: 18px; font-weight: 900; font-family: 'Bebas Neue', cursive; letter-spacing: 1.5px; margin-bottom: 6px; background: linear-gradient(135deg, #d00000 0%, #ffa500 50%, #d00000 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: congratsShine 3s linear infinite, congratsPulse 1.5s ease-in-out infinite alternate; z-index: 5; }
@@ -343,7 +333,7 @@
             .footer-column { align-items: center; }
             .footer-column h4 { align-self: center; }
             
-            .welcome-section { flex-direction: row; flex-wrap: nowrap; justify-content: space-between; padding: 6px 15px; }
+            .welcome-section { flex-direction: row; flex-wrap: nowrap; justify-content: space-between; padding: 4px 12px; }
             .welcome-text h1 { font-size: clamp(8.5px, 3.2vw, 12px); }
             
             .performance-analysis { grid-template-columns: 1fr; }
@@ -413,7 +403,7 @@
         </div>
     </div>
 
-    <!-- STATS CONTAINER SECTION - MINI 5 ICONS -->
+    <!-- STATS CONTAINER SECTION - 5 ICONS -->
     <div class="stats-container">
         <div class="stat-box">
             <i class="fa-solid fa-stopwatch"></i>
@@ -454,7 +444,7 @@
         <a href="#" class="btn-challenge">Solve Now</a>
     </div>
 
-    <!-- SECTION: Dedicated Student Relationship Manager (SRM) - MODIFIED DYNAMIC -->
+    <!-- SECTION: Dedicated Student Relationship Manager (SRM) - MODIFIED 2 LINES -->
     <div class="srm-banner">
         <div class="srm-icon-box">
             <i class="fa-solid fa-user-tie"></i>
@@ -463,7 +453,7 @@
             <div class="srm-content">
                 <div class="srm-title">Dedicated Student Relationship Manager (SRM)</div>
                 <p class="srm-desc">
-                    We are committed to your success! Your dedicated Student Relations Manager (SRM) acts as a bridge between you and academic excellence, providing tailored roadmaps, consistent guidance for competitive preparation, and swift resolution to any technical or subscription-related queries. We believe every student has a unique vision; your SRM is here to ensure that vision translates into a tangible reality of state-level success and foundational mastery. Reach out directly for personalized assistance.
+                    We are committed to your success! Your dedicated Student Relations Manager (SRM) acts as a bridge between you and academic excellence, providing tailored roadmaps, consistent guidance for competitive preparation, and swift resolution to any technical or subscription-related queries. We believe every student has a unique vision; your SRM is here to ensure that vision translates into a reality.
                 </p>
             </div>
             <div class="srm-contact-merged-gold">
@@ -719,7 +709,7 @@
         </div>
     </div>
 
-    <!-- PARENTS CORNER SECTION - 5 LOGINS FIELD -->
+    <!-- PARENTS CORNER SECTION - MODIFIED (Added Logins) -->
     <div class="new-feature-section parents-corner">
         <div class="parents-header"><i class="fa-solid fa-user-shield"></i> Parents Corner (Weekly Summary)</div>
         <div class="parents-stats">
@@ -766,6 +756,28 @@
                         return `
                         <div class="topper-unit">
                             <div class="rank-badge">1st Rank</div>
+                            <div class="firework-container">
+                                <div class="rocket" style="left: 15%; animation-delay: 0s;"></div>
+                                <div class="explosion-stars" style="left: 15%; animation-delay: 1.3s;">
+                                    <i class="fa-solid fa-star star-p" style="--tx: -50px; --ty: -50px;"></i>
+                                    <i class="fa-solid fa-star star-p" style="--tx: 50px; --ty: -50px;"></i>
+                                    <i class="fa-solid fa-star star-p" style="--tx: -50px; --ty: 50px;"></i>
+                                    <i class="fa-solid fa-star star-p" style="--tx: 50px; --ty: 50px;"></i>
+                                </div>
+                                <div class="rocket" style="left: 50%; animation-delay: 1.5s;"></div>
+                                <div class="explosion-stars" style="left: 50%; animation-delay: 2.8s;">
+                                    <i class="fa-solid fa-star star-p" style="--tx: -40px; --ty: -40px; color:#FF4500;"></i>
+                                    <i class="fa-solid fa-star star-p" style="--tx: 40px; --ty: -40px; color:#FF4500;"></i>
+                                    <i class="fa-solid fa-star star-p" style="--tx: 0px; --ty: 60px; color:#FF4500;"></i>
+                                </div>
+                                <div class="rocket" style="left: 85%; animation-delay: 2.5s;"></div>
+                                <div class="explosion-stars" style="left: 85%; animation-delay: 3.8s;">
+                                    <i class="fa-solid fa-star star-p" style="--tx: -60px; --ty: 0px;"></i>
+                                    <i class="fa-solid fa-star star-p" style="--tx: 60px; --ty: 0px;"></i>
+                                    <i class="fa-solid fa-star star-p" style="--tx: 0px; --ty: -60px;"></i>
+                                </div>
+                            </div>
+                            
                             <div class="congrats-txt">CONGRATULATIONS!</div>
                             <img src="${p.photo || logoFallback}" class="topper-photo" onerror="this.src='${logoFallback}'">
                             <div style="font-size: 18px; font-weight: 900; color: var(--primary-blue); margin-bottom: 2px;">${p.name}</div>
